@@ -1,0 +1,14 @@
+<!-- templates/login.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Login</h2>
+<form method="GET">
+    <label for="username">Usuário</label>
+    <input type="text" name="username" required>
+    <label for="password">Senha</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+<p>Você não tem uma conta? <a href="{{ url_for('register') }}">Registrar</a></p>
+{% endblock %}
